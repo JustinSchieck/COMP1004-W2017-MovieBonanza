@@ -77,6 +77,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="SelectionForm.resx">
       <DependentUpon>SelectionForm.cs</DependentUpon>
@@ -97,28 +98,68 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="Resources\CedarRapids.jpg" />
-    <Content Include="Resources\Company Men.jpg" />
-    <Content Include="Resources\Death_Race_2.jpg" />
-    <Content Include="Resources\Footloose.jpg" />
-    <Content Include="Resources\Gnomeo_&amp;_Juliet.jpg" />
-    <Content Include="Resources\I_Am_Number_Four.jpg" />
-    <Content Include="Resources\Just_Go_with_It.jpg" />
-    <Content Include="Resources\Mechanic_poster.jpg" />
-    <Content Include="Resources\No_Strings_Attached_Poster.jpg" />
-    <Content Include="Resources\Real_Steel.jpg" />
-    <Content Include="Resources\Roommate.jpg" />
-    <Content Include="Resources\sanctum.jpg" />
-    <Content Include="Resources\Season_of_the_Witch.jpg" />
-    <Content Include="Resources\TheDilemma.jpg" />
-    <Content Include="Resources\The_Eagle.jpg" />
-    <Content Include="Resources\The_Green_Hornet_Poster.jpg" />
-    <Content Include="Resources\The_Other_Woman.jpg" />
-    <Content Include="Resources\The_rite.jpg" />
-    <Content Include="Resources\The_Way_Back.jpg" />
-    <Content Include="Resources\Waiting_for_Forever.jpg" />
+    <None Include="Resources\CedarRapids.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Company Men.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Death_Race_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Footloose.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gnomeo_&amp;_Juliet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\I_Am_Number_Four.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Just_Go_with_It.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mechanic_poster.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\No_Strings_Attached_Poster.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Real_Steel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Roommate.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sanctum.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Season_of_the_Witch.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\season_of_the_witch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The_Eagle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The_Green_Hornet_Poster.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The_Other_Woman.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The_rite.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The_Way_Back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TheDilemma.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Waiting_for_Forever.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
