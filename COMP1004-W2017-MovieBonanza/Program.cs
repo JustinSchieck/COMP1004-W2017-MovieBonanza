@@ -17,6 +17,8 @@ namespace COMP1004_W2017_MovieBonanza
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new OrderForm());
+
+            
         }
     }
 }

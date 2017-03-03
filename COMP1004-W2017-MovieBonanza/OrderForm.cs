@@ -12,6 +12,9 @@ namespace COMP1004_W2017_MovieBonanza
 {
     public partial class OrderForm : Form
     {
+
+        public SelectionForm previousForm { get; set; }
+
         public OrderForm()
         {
             InitializeComponent();
