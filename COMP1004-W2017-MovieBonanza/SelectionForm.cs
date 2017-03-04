@@ -13,13 +13,27 @@ namespace COMP1004_W2017_MovieBonanza
     public partial class SelectionForm : Form
     {
 
-        string[] Selection = new string[3]; 
+        /// <summary>
+        /// Program: Movie Bonanza Assignment 3
+        /// Name: Justin Schieck
+        /// StudentID: 200328630
+        /// App Creation Date: March 4th, 2017
+        /// App Desc: Mimics a streaming service for customers
+        /// </summary>
+
+        //unused string, left for later use
+        //string[] Selection = new string[3]; 
 
         public SelectionForm()
         {
             InitializeComponent();
         }
-
+        
+        /// <summary>
+        /// Stores the variables if not null, sends the information to movie.cs
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _NextButton_Click(object sender, EventArgs e)
         {
             try
@@ -60,6 +74,12 @@ namespace COMP1004_W2017_MovieBonanza
 
         }
 
+        /// <summary>
+        /// When movie is selected it runs the find poster method aswell as category method, aswell as makes the next button usable
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _MovieListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             TitleTextBox.Text = Convert.ToString(MovieListBox.Text);
@@ -70,6 +90,9 @@ namespace COMP1004_W2017_MovieBonanza
         }
 
 
+        /// <summary>
+        /// Reads the textbox and shows the poster linked to the name, also  stores choice in variable in movie.cs
+        /// </summary>
         private void _SetPoster()
         {
 
@@ -192,6 +215,9 @@ namespace COMP1004_W2017_MovieBonanza
             }
         }
 
+        /// <summary>
+        /// Displays the category of the movie chosen, aswell as sets the price of the selected movie
+        /// </summary>
         private void _CategorySelector()
         {
           
