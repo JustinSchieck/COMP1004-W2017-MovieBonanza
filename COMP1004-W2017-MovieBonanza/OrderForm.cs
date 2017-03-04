@@ -20,16 +20,16 @@ namespace COMP1004_W2017_MovieBonanza
             InitializeComponent();
         }
 
-        private void OrderForm_Load(object sender, EventArgs e)
+        private void _OrderForm_Load(object sender, EventArgs e)
         {
             TitleTextBox.Text = Program.movie.title;
             CategoryTextBox.Text = Program.movie.category;
             CostTextBox.Text = Program.movie.cost;
             MovieSelectedPictureBox.Image = Program.movie.image;
-            GetTotalCost();
+            _GetTotalCost();
         }
 
-        private void GetTotalCost()
+        private void _GetTotalCost()
         {
 
             if(DvdCheckBox.Checked == true)
@@ -60,26 +60,28 @@ namespace COMP1004_W2017_MovieBonanza
 
         }
 
-        private void DvdCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void _DvdCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            GetTotalCost();
+            _GetTotalCost();
             
         }
 
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        private void _aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AboutBox aboutbox = new AboutBox();
 
             aboutbox.ShowDialog();
         }
 
-        private void CancelButton_Click(object sender, EventArgs e)
+        private void _CancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void StreamButton_Click(object sender, EventArgs e)
+        private void _StreamButton_Click(object sender, EventArgs e)
         {
+
+            Program.movie.cost = GrandTotalTextBox.Text;
 
             this.Hide();
 
@@ -87,13 +89,13 @@ namespace COMP1004_W2017_MovieBonanza
             streamForm.Show();
         }
 
-        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        private void _printToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("You have ordered: " + "\n" + TitleTextBox.Text + "\n" + "Genre: " + CategoryTextBox.Text +
                 "\n" + "Cost: " + GrandTotalTextBox.Text);
         }
 
-        private void BackButton_Click(object sender, EventArgs e)
+        private void _BackButton_Click(object sender, EventArgs e)
         {
             this.Hide();
 

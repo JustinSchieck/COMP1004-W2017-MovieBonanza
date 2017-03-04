@@ -70,19 +70,25 @@
             this.OkButton.TabIndex = 3;
             this.OkButton.Text = "Ok";
             this.OkButton.UseVisualStyleBackColor = true;
-            this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
+            this.OkButton.Click += new System.EventHandler(this._OkButton_Click);
             // 
             // StreamForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(439, 211);
+            this.ControlBox = false;
             this.Controls.Add(this.OkButton);
             this.Controls.Add(this.ThanksLabel);
             this.Controls.Add(this.MovieLabel);
             this.Controls.Add(this.CostLabel);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "StreamForm";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Your Stream is about to Start!";
+            this.Load += new System.EventHandler(this._StreamForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

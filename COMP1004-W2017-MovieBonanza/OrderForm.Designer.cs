@@ -182,7 +182,7 @@
             this.DvdCheckBox.TabIndex = 4;
             this.DvdCheckBox.Text = "Order DVD (adds $10.00 to your order)";
             this.DvdCheckBox.UseVisualStyleBackColor = true;
-            this.DvdCheckBox.CheckedChanged += new System.EventHandler(this.DvdCheckBox_CheckedChanged);
+            this.DvdCheckBox.CheckedChanged += new System.EventHandler(this._DvdCheckBox_CheckedChanged);
             // 
             // GrandTotalLabel
             // 
@@ -259,7 +259,7 @@
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
             this.printToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
             this.printToolStripMenuItem.Text = "&Print";
-            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
+            this.printToolStripMenuItem.Click += new System.EventHandler(this._printToolStripMenuItem_Click);
             // 
             // streamToolStripMenuItem
             // 
@@ -272,14 +272,14 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
             this.exitToolStripMenuItem.Text = "&Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.CancelButton_Click);
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this._CancelButton_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
             this.aboutToolStripMenuItem.Text = "&About";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this._aboutToolStripMenuItem_Click);
             // 
             // CancelButton
             // 
@@ -289,7 +289,7 @@
             this.CancelButton.TabIndex = 3;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.CancelButton.Click += new System.EventHandler(this._CancelButton_Click);
             // 
             // StreamButton
             // 
@@ -299,7 +299,7 @@
             this.StreamButton.TabIndex = 4;
             this.StreamButton.Text = "Stream";
             this.StreamButton.UseVisualStyleBackColor = true;
-            this.StreamButton.Click += new System.EventHandler(this.StreamButton_Click);
+            this.StreamButton.Click += new System.EventHandler(this._StreamButton_Click);
             // 
             // DvdLabel
             // 
@@ -337,7 +337,7 @@
             this.BackButton.TabIndex = 5;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = true;
-            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            this.BackButton.Click += new System.EventHandler(this._BackButton_Click);
             // 
             // OrderForm
             // 
@@ -357,7 +357,7 @@
             this.Name = "OrderForm";
             this.ShowIcon = false;
             this.Text = "Chosen Video";
-            this.Load += new System.EventHandler(this.OrderForm_Load);
+            this.Load += new System.EventHandler(this._OrderForm_Load);
             this.MovieSelectGroupBox.ResumeLayout(false);
             this.MovieSelectGroupBox.PerformLayout();
             this.OrderGroupBox.ResumeLayout(false);

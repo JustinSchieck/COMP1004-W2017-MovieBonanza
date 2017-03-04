@@ -17,9 +17,15 @@ namespace COMP1004_W2017_MovieBonanza
             InitializeComponent();
         }
 
-        private void OkButton_Click(object sender, EventArgs e)
+        private void _OkButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void _StreamForm_Load(object sender, EventArgs e)
+        {
+            CostLabel.Text = "Your credit card will be charged " + Program.movie.cost;
+            MovieLabel.Text = Program.movie.title + " will begin playing shortly.";
         }
     }
 }

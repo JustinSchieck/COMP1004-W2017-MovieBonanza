@@ -20,7 +20,7 @@ namespace COMP1004_W2017_MovieBonanza
             InitializeComponent();
         }
 
-        private void NextButton_Click(object sender, EventArgs e)
+        private void _NextButton_Click(object sender, EventArgs e)
         {
             try
             {
@@ -60,17 +60,17 @@ namespace COMP1004_W2017_MovieBonanza
 
         }
 
-        private void MovieListBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void _MovieListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             TitleTextBox.Text = Convert.ToString(MovieListBox.Text);
-            SetPoster();
-            CategorySelector();
+            _SetPoster();
+            _CategorySelector();
             NextButton.Enabled = true;
 
         }
 
 
-        private void SetPoster()
+        private void _SetPoster()
         {
 
             if (TitleTextBox.Text == "Season of the Witch")
@@ -192,7 +192,7 @@ namespace COMP1004_W2017_MovieBonanza
             }
         }
 
-        private void CategorySelector()
+        private void _CategorySelector()
         {
           
                 if (TitleTextBox.Text == "Season of the Witch" || TitleTextBox.Text == "I am Number Four")
