@@ -36,8 +36,9 @@ namespace COMP1004_W2017_MovieBonanza
         //Loads the variables into the proper places in the labels.
         private void _StreamForm_Load(object sender, EventArgs e)
         {
-            CostLabel.Text = "Your credit card will be charged " + Program.movie.cost;
-            MovieLabel.Text = Program.movie.title + " will begin playing shortly.";
+            CostLabel.Text = "Your credit card will be charged " + Program.movie.cost + "\n" 
+                + Program.movie.title + " will begin playing shortly.";
+          
         }
     }
 }
