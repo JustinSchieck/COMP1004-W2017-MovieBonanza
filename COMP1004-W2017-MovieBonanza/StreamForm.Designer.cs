@@ -1,6 +1,6 @@
 ﻿namespace COMP1004_W2017_MovieBonanza
 {
-    partial class StreamFrom
+    partial class StreamForm
     {
         /// <summary>
         /// Required designer variable.

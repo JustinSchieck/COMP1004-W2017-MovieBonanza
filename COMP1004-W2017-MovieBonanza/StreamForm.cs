@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace COMP1004_W2017_MovieBonanza
 {
-    public partial class StreamFrom : Form
+    public partial class StreamForm : Form
     {
-        public StreamFrom()
+        public StreamForm()
         {
             InitializeComponent();
         }
