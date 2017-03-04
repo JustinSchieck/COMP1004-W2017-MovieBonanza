@@ -16,5 +16,10 @@ namespace COMP1004_W2017_MovieBonanza
         {
             InitializeComponent();
         }
+
+        private void OkButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

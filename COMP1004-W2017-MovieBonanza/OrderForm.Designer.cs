@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.MovieSelectGroupBox = new System.Windows.Forms.GroupBox();
-            this.MovieSelectedPictureBox = new System.Windows.Forms.PictureBox();
             this.CategoryTextBox = new System.Windows.Forms.TextBox();
             this.TitleTextBox = new System.Windows.Forms.TextBox();
             this.CategoryLabel = new System.Windows.Forms.Label();
@@ -53,10 +52,14 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CancelButton = new System.Windows.Forms.Button();
             this.StreamButton = new System.Windows.Forms.Button();
+            this.DvdLabel = new System.Windows.Forms.Label();
+            this.DvdTextBox = new System.Windows.Forms.TextBox();
+            this.MovieSelectedPictureBox = new System.Windows.Forms.PictureBox();
+            this.BackButton = new System.Windows.Forms.Button();
             this.MovieSelectGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MovieSelectedPictureBox)).BeginInit();
             this.OrderGroupBox.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MovieSelectedPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // MovieSelectGroupBox
@@ -74,15 +77,6 @@
             this.MovieSelectGroupBox.TabStop = false;
             this.MovieSelectGroupBox.Text = "Movie Selected";
             // 
-            // MovieSelectedPictureBox
-            // 
-            this.MovieSelectedPictureBox.Location = new System.Drawing.Point(10, 156);
-            this.MovieSelectedPictureBox.Name = "MovieSelectedPictureBox";
-            this.MovieSelectedPictureBox.Size = new System.Drawing.Size(269, 350);
-            this.MovieSelectedPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.MovieSelectedPictureBox.TabIndex = 4;
-            this.MovieSelectedPictureBox.TabStop = false;
-            // 
             // CategoryTextBox
             // 
             this.CategoryTextBox.Location = new System.Drawing.Point(11, 112);
@@ -90,6 +84,7 @@
             this.CategoryTextBox.ReadOnly = true;
             this.CategoryTextBox.Size = new System.Drawing.Size(256, 22);
             this.CategoryTextBox.TabIndex = 3;
+            this.CategoryTextBox.TabStop = false;
             // 
             // TitleTextBox
             // 
@@ -98,6 +93,7 @@
             this.TitleTextBox.ReadOnly = true;
             this.TitleTextBox.Size = new System.Drawing.Size(256, 22);
             this.TitleTextBox.TabIndex = 2;
+            this.TitleTextBox.TabStop = false;
             // 
             // CategoryLabel
             // 
@@ -121,6 +117,8 @@
             // 
             // OrderGroupBox
             // 
+            this.OrderGroupBox.Controls.Add(this.DvdTextBox);
+            this.OrderGroupBox.Controls.Add(this.DvdLabel);
             this.OrderGroupBox.Controls.Add(this.GrandTotalTextBox);
             this.OrderGroupBox.Controls.Add(this.SalesTaxTextBox);
             this.OrderGroupBox.Controls.Add(this.SubtotalTextBox);
@@ -145,6 +143,7 @@
             this.GrandTotalTextBox.ReadOnly = true;
             this.GrandTotalTextBox.Size = new System.Drawing.Size(100, 22);
             this.GrandTotalTextBox.TabIndex = 8;
+            this.GrandTotalTextBox.TabStop = false;
             // 
             // SalesTaxTextBox
             // 
@@ -153,14 +152,16 @@
             this.SalesTaxTextBox.ReadOnly = true;
             this.SalesTaxTextBox.Size = new System.Drawing.Size(100, 22);
             this.SalesTaxTextBox.TabIndex = 7;
+            this.SalesTaxTextBox.TabStop = false;
             // 
             // SubtotalTextBox
             // 
-            this.SubtotalTextBox.Location = new System.Drawing.Point(174, 131);
+            this.SubtotalTextBox.Location = new System.Drawing.Point(173, 140);
             this.SubtotalTextBox.Name = "SubtotalTextBox";
             this.SubtotalTextBox.ReadOnly = true;
             this.SubtotalTextBox.Size = new System.Drawing.Size(100, 22);
             this.SubtotalTextBox.TabIndex = 6;
+            this.SubtotalTextBox.TabStop = false;
             // 
             // CostTextBox
             // 
@@ -169,6 +170,7 @@
             this.CostTextBox.ReadOnly = true;
             this.CostTextBox.Size = new System.Drawing.Size(100, 22);
             this.CostTextBox.TabIndex = 5;
+            this.CostTextBox.TabStop = false;
             // 
             // DvdCheckBox
             // 
@@ -196,7 +198,7 @@
             // 
             this.TaxLabel.AutoSize = true;
             this.TaxLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaxLabel.Location = new System.Drawing.Point(28, 199);
+            this.TaxLabel.Location = new System.Drawing.Point(26, 199);
             this.TaxLabel.Name = "TaxLabel";
             this.TaxLabel.Size = new System.Drawing.Size(132, 17);
             this.TaxLabel.TabIndex = 2;
@@ -206,7 +208,7 @@
             // 
             this.SubtotalLabel.AutoSize = true;
             this.SubtotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubtotalLabel.Location = new System.Drawing.Point(76, 134);
+            this.SubtotalLabel.Location = new System.Drawing.Point(76, 142);
             this.SubtotalLabel.Name = "SubtotalLabel";
             this.SubtotalLabel.Size = new System.Drawing.Size(78, 17);
             this.SubtotalLabel.TabIndex = 1;
@@ -255,33 +257,33 @@
             // printToolStripMenuItem
             // 
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
             this.printToolStripMenuItem.Text = "&Print";
             this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // streamToolStripMenuItem
             // 
             this.streamToolStripMenuItem.Name = "streamToolStripMenuItem";
-            this.streamToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.streamToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
             this.streamToolStripMenuItem.Text = "&Stream";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
             this.exitToolStripMenuItem.Text = "&Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
             this.aboutToolStripMenuItem.Text = "&About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // CancelButton
             // 
-            this.CancelButton.Location = new System.Drawing.Point(345, 539);
+            this.CancelButton.Location = new System.Drawing.Point(321, 538);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(88, 34);
             this.CancelButton.TabIndex = 3;
@@ -291,7 +293,7 @@
             // 
             // StreamButton
             // 
-            this.StreamButton.Location = new System.Drawing.Point(551, 539);
+            this.StreamButton.Location = new System.Drawing.Point(578, 538);
             this.StreamButton.Name = "StreamButton";
             this.StreamButton.Size = new System.Drawing.Size(86, 34);
             this.StreamButton.TabIndex = 4;
@@ -299,27 +301,70 @@
             this.StreamButton.UseVisualStyleBackColor = true;
             this.StreamButton.Click += new System.EventHandler(this.StreamButton_Click);
             // 
+            // DvdLabel
+            // 
+            this.DvdLabel.AutoSize = true;
+            this.DvdLabel.Location = new System.Drawing.Point(105, 101);
+            this.DvdLabel.Name = "DvdLabel";
+            this.DvdLabel.Size = new System.Drawing.Size(46, 17);
+            this.DvdLabel.TabIndex = 9;
+            this.DvdLabel.Text = "Dvd: ";
+            this.DvdLabel.Visible = false;
+            // 
+            // DvdTextBox
+            // 
+            this.DvdTextBox.Location = new System.Drawing.Point(173, 101);
+            this.DvdTextBox.Name = "DvdTextBox";
+            this.DvdTextBox.ReadOnly = true;
+            this.DvdTextBox.Size = new System.Drawing.Size(100, 22);
+            this.DvdTextBox.TabIndex = 10;
+            this.DvdTextBox.Visible = false;
+            // 
+            // MovieSelectedPictureBox
+            // 
+            this.MovieSelectedPictureBox.Location = new System.Drawing.Point(10, 156);
+            this.MovieSelectedPictureBox.Name = "MovieSelectedPictureBox";
+            this.MovieSelectedPictureBox.Size = new System.Drawing.Size(269, 350);
+            this.MovieSelectedPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.MovieSelectedPictureBox.TabIndex = 4;
+            this.MovieSelectedPictureBox.TabStop = false;
+            // 
+            // BackButton
+            // 
+            this.BackButton.Location = new System.Drawing.Point(449, 538);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(82, 34);
+            this.BackButton.TabIndex = 5;
+            this.BackButton.Text = "Back";
+            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(699, 649);
+            this.ControlBox = false;
+            this.Controls.Add(this.BackButton);
             this.Controls.Add(this.StreamButton);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.OrderGroupBox);
             this.Controls.Add(this.MovieSelectGroupBox);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "OrderForm";
-            this.Text = "Form1";
+            this.ShowIcon = false;
+            this.Text = "Chosen Video";
             this.Load += new System.EventHandler(this.OrderForm_Load);
             this.MovieSelectGroupBox.ResumeLayout(false);
             this.MovieSelectGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MovieSelectedPictureBox)).EndInit();
             this.OrderGroupBox.ResumeLayout(false);
             this.OrderGroupBox.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MovieSelectedPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,6 +397,9 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button StreamButton;
+        private System.Windows.Forms.TextBox DvdTextBox;
+        private System.Windows.Forms.Label DvdLabel;
+        private System.Windows.Forms.Button BackButton;
     }
 }
 

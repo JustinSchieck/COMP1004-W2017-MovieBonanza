@@ -37,7 +37,9 @@ namespace COMP1004_W2017_MovieBonanza
                 double Subtotal = Convert.ToDouble(Program.movie.cost) + 10;
                 double Tax = Subtotal * 0.13;
                 double Total = Subtotal * 1.13;
-
+                DvdLabel.Show();
+                DvdTextBox.Text = "10.00";
+                DvdTextBox.Show();
                 SubtotalTextBox.Text = Subtotal.ToString("C2");
                 SalesTaxTextBox.Text = Tax.ToString("C2");
                 GrandTotalTextBox.Text = Total.ToString("C2");
@@ -48,7 +50,8 @@ namespace COMP1004_W2017_MovieBonanza
                 double Subtotal = Convert.ToDouble(Program.movie.cost);
                 double Tax = Subtotal * 0.13;
                 double Total = Subtotal * 1.13;
-
+                DvdTextBox.Hide();
+                DvdLabel.Hide();
                 SubtotalTextBox.Text = Subtotal.ToString("C2");
                 SalesTaxTextBox.Text = Tax.ToString("C2");
                 GrandTotalTextBox.Text = Total.ToString("C2");
@@ -60,6 +63,7 @@ namespace COMP1004_W2017_MovieBonanza
         private void DvdCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             GetTotalCost();
+            
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -87,6 +91,14 @@ namespace COMP1004_W2017_MovieBonanza
         {
             MessageBox.Show("You have ordered: " + "\n" + TitleTextBox.Text + "\n" + "Genre: " + CategoryTextBox.Text +
                 "\n" + "Cost: " + GrandTotalTextBox.Text);
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            SelectionForm selectionForm = new SelectionForm();
+            selectionForm.Show();
         }
     }
 }

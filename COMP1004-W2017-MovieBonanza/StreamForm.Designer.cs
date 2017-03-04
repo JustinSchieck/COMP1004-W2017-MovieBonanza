@@ -31,6 +31,7 @@
             this.CostLabel = new System.Windows.Forms.Label();
             this.MovieLabel = new System.Windows.Forms.Label();
             this.ThanksLabel = new System.Windows.Forms.Label();
+            this.OkButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CostLabel
@@ -61,15 +62,26 @@
             this.ThanksLabel.TabIndex = 2;
             this.ThanksLabel.Text = "Thank you for choosing Movie Bonanza!";
             // 
-            // StreamFrom
+            // OkButton
+            // 
+            this.OkButton.Location = new System.Drawing.Point(173, 159);
+            this.OkButton.Name = "OkButton";
+            this.OkButton.Size = new System.Drawing.Size(74, 23);
+            this.OkButton.TabIndex = 3;
+            this.OkButton.Text = "Ok";
+            this.OkButton.UseVisualStyleBackColor = true;
+            this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
+            // 
+            // StreamForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(439, 187);
+            this.ClientSize = new System.Drawing.Size(439, 211);
+            this.Controls.Add(this.OkButton);
             this.Controls.Add(this.ThanksLabel);
             this.Controls.Add(this.MovieLabel);
             this.Controls.Add(this.CostLabel);
-            this.Name = "StreamFrom";
+            this.Name = "StreamForm";
             this.Text = "Your Stream is about to Start!";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -81,5 +93,6 @@
         private System.Windows.Forms.Label CostLabel;
         private System.Windows.Forms.Label MovieLabel;
         private System.Windows.Forms.Label ThanksLabel;
+        private System.Windows.Forms.Button OkButton;
     }
 }
